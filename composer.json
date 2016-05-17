@@ -1,0 +1,15 @@
+{
+  "name": "xpwales/xpwales-identity",
+  "license": "BSD-3-Clause",
+  "require-dev": {
+    "phpunit/PHPUnit": "~4.0"
+  },
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Xpwales\\Identity\\": "src/"
+    }
+  }
+}
