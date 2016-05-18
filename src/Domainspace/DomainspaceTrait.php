@@ -5,9 +5,7 @@ namespace Xpwales\Identity\Domainspace;
 use Xpwales\Identity\Domainspace\Exception;
 
 /**
- * DomainspaceTrait
- *
- * Accessors for classes implementing the domain space interface
+ * Accessors for domain space implementation
  *
  * @author Michael Adrian <michael.adrian@xpwales.com>
  *
@@ -16,16 +14,16 @@ use Xpwales\Identity\Domainspace\Exception;
 trait DomainspaceTrait
 {
     /**
-     * @var null
+     * @var string
      */
     private $domainspace = null;
 
     /**
      * @param string $domainspace
      *
-     * @return $this
+     * @throws Exception\InvalidArgumentException on empty domainspace param value
      *
-     * @throws Exception\InvalidArgumentException on empty domainspace param
+     * @return $this
      */
     public function setDomainspace($domainspace)
     {
@@ -42,7 +40,9 @@ trait DomainspaceTrait
     }
 
     /**
-     * @see DomainspaceInterface
+     * @throws Exception\RuntimeException on unset domain space
+     *
+     * @return string
      */
     public function getDomainspace()
     {

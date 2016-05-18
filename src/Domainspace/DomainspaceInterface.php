@@ -3,14 +3,12 @@
 namespace Xpwales\Identity\Domainspace;
 
 /**
- * DomainspaceInterface
+ * Implementing classes provides a domain space which is
+ * unique within an application.
  *
- * Implementing classes will provide a domain space which is
- * unique to the application. It provides a mechanism for grouping related identites
+ * Can be used to group related domain entities.
  *
  * @author Michael Adrian <michael.adrian@xpwales.com>
- *
- * @package Xpwales\Identity\DomainSpace
  */
 interface DomainspaceInterface
 {

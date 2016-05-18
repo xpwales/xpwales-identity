@@ -1,5 +1,6 @@
 <?php
-namespace Xpwales\Identity\Domainspace\Exception;
+
+namespace Xpwales\Identity\Identity\Exception;
 
 class RuntimeException
     extends \RuntimeException
