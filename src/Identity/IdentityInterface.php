@@ -17,8 +17,16 @@ interface IdentityInterface extends DomainspaceInterface
     /**
      * Array may be associative to identify each value
      *
-     * @return \Traversable|array
+     * @return array
      */
     public function getValues();
+
+    /**
+     * @param int|string  $value
+     * @param null|string $name
+     *
+     * @return $this
+     */
+    public function setValue($value, $name=null);
 
 }//end interface
