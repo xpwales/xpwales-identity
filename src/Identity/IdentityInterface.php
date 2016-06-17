@@ -2,17 +2,17 @@
 
 namespace Xpwales\Identity\Identity;
 
-use Xpwales\Identity\Domainspace\DomainspaceInterface;
+use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareGetterInterface;
 
 /**
  * Represents a unique entity ID value.
  *
- * It's uniqueness is formed by a combination of domain space and value.
- * The value may not be unique within the application but should be unique within it's domain space.
+ * It's uniqueness is formed by a combination of domain space and values.
+ * The values may not be unique within the application but should be unique within it's domain space.
  *
  * @author Michael Adrian <michael.adrian@xpwales.com>
  */
-interface IdentityInterface extends DomainspaceInterface
+interface IdentityInterface extends DomainspaceValueAwareGetterInterface
 {
     /**
      * Array may be associative to identify each value
@@ -28,5 +28,12 @@ interface IdentityInterface extends DomainspaceInterface
      * @return $this
      */
     public function setValue($value, $name=null);
+
+    /**
+     * Are all values populated
+     *
+     * @return bool
+     */
+    public function isComplete();
 
 }//end interface
