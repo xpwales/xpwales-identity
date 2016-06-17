@@ -2,10 +2,11 @@
 
 namespace Xpwales\Identity\Identity;
 
+use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareInterface;
 use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareTrait;
 use Xpwales\Identity\Identity\Exception;
 
-class Identity implements IdentityInterface
+class Identity implements IdentityInterface, DomainspaceValueAwareInterface
 {
     use DomainspaceValueAwareTrait;
 
