@@ -30,7 +30,7 @@ trait IdentityAwareTrait
      *
      * @return IdentityInterface
      *
-     * @see IdentityAwareSetterInterface
+     * @see IdentityAwareGetterInterface
      */
     public function getIdentity()
     {
