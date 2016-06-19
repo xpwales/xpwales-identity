@@ -15,8 +15,6 @@ use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareGetterInterface
 interface IdentityInterface extends DomainspaceValueAwareGetterInterface
 {
     /**
-     * Array may be associative to identify each value
-     *
      * @return array
      */
     public function getValues();
