@@ -6,6 +6,11 @@ use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareInterface;
 use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareTrait;
 use Xpwales\Identity\Identity\Exception;
 
+/**
+ * Generic identity class
+ *
+ * @package Xpwales\Identity\Identity
+ */
 class Identity implements IdentityInterface, DomainspaceValueAwareInterface
 {
     use DomainspaceValueAwareTrait;
@@ -46,6 +51,7 @@ class Identity implements IdentityInterface, DomainspaceValueAwareInterface
         }//end loop
 
         if (count($this->values) === 0) {
+            // Is single value identity
             $this->values[static::DEFAULT_VALUE_NAME] = null;
         }
     }
@@ -80,7 +86,7 @@ class Identity implements IdentityInterface, DomainspaceValueAwareInterface
             throw new Exception\InvalidArgumentException($msg);
         }
 
-        // No name specified? Revert to default name
+        // No name specified? Assume single value identity
         $name = (null === $name) ? static::DEFAULT_VALUE_NAME : $name;
 
         // Validate name
