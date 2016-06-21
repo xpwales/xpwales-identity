@@ -28,4 +28,9 @@ interface IdentityAwareObjectStorageInterface
      */
     public function contains(IdentityAwareGetterInterface $object);
 
+    /**
+     * @return IdentityAwareGetterInterface|null
+     */
+    public function current();
+
 }//end interface
