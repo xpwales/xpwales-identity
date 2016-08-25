@@ -2,7 +2,7 @@
 
 namespace Xpwales\Identity\IdentityAware;
 
-use Xpwales\Identity\Identity\Exception;
+use Xpwales\Identity\IdentityAware\Exception;
 use Xpwales\Identity\Identity\IdentityInterface;
 
 trait IdentityAwareTrait
