@@ -2,8 +2,7 @@
 
 namespace Xpwales\Identity\Identity;
 
-use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareInterface;
-use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareTrait;
+use Xpwales\Identity\Domainspace\DomainspaceTrait;
 use Xpwales\Identity\Identity\Exception;
 
 /**
@@ -11,9 +10,9 @@ use Xpwales\Identity\Identity\Exception;
  *
  * @package Xpwales\Identity\Identity
  */
-class Identity implements IdentityInterface, DomainspaceValueAwareInterface
+class GenericIdentity implements IdentityInterface
 {
-    use DomainspaceValueAwareTrait;
+    use DomainspaceTrait;
 
     // For single value identities
     const DEFAULT_VALUE_NAME = 'default';
@@ -33,7 +32,7 @@ class Identity implements IdentityInterface, DomainspaceValueAwareInterface
      */
     public function __construct(array $valueNames = array())
     {
-        foreach ($valueNames as $name => $index) {
+        foreach ($valueNames as $index => $name) {
             $name = (string) $name;
             
             if (empty($name) === true) {
@@ -61,7 +60,7 @@ class Identity implements IdentityInterface, DomainspaceValueAwareInterface
      */
     public function getValues()
     {
-        return array_values($this->values);
+        return $this->values;
     }
 
     /**

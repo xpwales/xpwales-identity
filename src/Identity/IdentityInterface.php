@@ -2,7 +2,7 @@
 
 namespace Xpwales\Identity\Identity;
 
-use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareGetterInterface;
+use Xpwales\Identity\Domainspace\DomainspaceInterface;
 
 /**
  * Represents a unique entity ID value.
@@ -12,7 +12,7 @@ use Xpwales\Identity\Domainspace\ValueAware\DomainspaceValueAwareGetterInterface
  *
  * @author Michael Adrian <michael.adrian@xpwales.com>
  */
-interface IdentityInterface extends DomainspaceValueAwareGetterInterface
+interface IdentityInterface extends DomainspaceInterface
 {
     /**
      * @return array

@@ -3,7 +3,7 @@
 namespace Xpwales\Identity\Identity\Exception;
 
 class InvalidArgumentException
-    extends \RuntimeException
+    extends \InvalidArgumentException
     implements ExceptionInterface
 {
 }
