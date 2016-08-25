@@ -6,5 +6,6 @@
 .*.sw*
 .*.un~
 nbproject
+phpunit.xml
 composer.lock
 vendor
