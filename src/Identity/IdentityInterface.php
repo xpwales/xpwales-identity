@@ -28,7 +28,7 @@ interface IdentityInterface extends DomainspaceValueAwareGetterInterface
     public function setValue($value, $name=null);
 
     /**
-     * Are all values populated
+     * Are all values populated?
      *
      * @return bool
      */
