@@ -20,4 +20,11 @@ interface IdentityAwareObjectStorageInterface extends \Traversable, \Countable
      */
     public function detach(IdentityAwareGetterInterface $object);
 
+    /**
+     * @param IdentityAwareGetterInterface $object
+     *
+     * @return bool
+     */
+    public function contains(IdentityAwareGetterInterface $object);
+
 }//end interface

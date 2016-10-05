@@ -41,6 +41,16 @@ class IdentityAwareObjectStorage implements \IteratorAggregate, IdentityAwareObj
     /**
      * @inheritdoc
      */
+    public function contains(IdentityAwareGetterInterface $object)
+    {
+        $key = IdentityUtils::assembleKey($object->getIdentity());
+
+        return array_key_exists($key, $this->objects);
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function count()
     {
         return count($this->objects);
