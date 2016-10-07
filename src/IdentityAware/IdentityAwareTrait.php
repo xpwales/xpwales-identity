@@ -36,7 +36,11 @@ trait IdentityAwareTrait
     public function getIdentity()
     {
         if (null === $this->identity) {
-            $msg = 'Identity must be set before access';
+            $msg = sprintf(
+                'Identity must be set before access in %s',
+                __CLASS__
+            );
+
             throw new Exception\RuntimeException($msg);
         }
         
