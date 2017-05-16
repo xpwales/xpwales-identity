@@ -19,9 +19,9 @@ class SingleIntegerIdentityFactory
 	 *
 	 * @see IdentityFactoryInterface
 	 */
-	public function createIdentity()
+	public function createIdentity($values=null)
 	{
-		$identity    = new SingleIntegerIdentity();
+		$identity    = new SingleIntegerIdentity($values);
 		$domainspace = $this->getDomainspace();
 
 		$identity->setDomainspace($domainspace);
