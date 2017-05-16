@@ -16,9 +16,11 @@ class SingleIntegerIdentity implements IdentityInterface
 	/**
 	 * @param int $value
 	 */
-	public function __construct($value)
+	public function __construct($value=null)
 	{
-		$this->setValue($value);
+		if (null !== $value) {
+			$this->setValue($value);
+		}
 	}
 
 	/**
