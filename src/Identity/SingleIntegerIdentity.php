@@ -14,6 +14,14 @@ class SingleIntegerIdentity implements IdentityInterface
 	private $idValue = null;
 
 	/**
+	 * @param int $value
+	 */
+	public function __construct($value)
+	{
+		$this->setValue($value);
+	}
+
+	/**
 	 * @inheritdoc
 	 *
 	 * @see IdentityInterface
